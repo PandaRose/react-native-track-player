@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
   s.summary = package["description"]
   s.license = package["license"]
 
-  s.author = "David Chavez"
-  s.homepage = package["repository"]["url"]
-  s.platform = :ios, "11.0"
-
+  s.author    = "David Chavez"
+  s.homepage  = package["repository"]["url"]
+  s.platforms = { :ios => "11.0", :tvos => "11.0" }
+  
   s.source = { :git => package["repository"]["url"], :tag => "v#{s.version}" }
   s.source_files = "ios/**/*.{h,m,swift}"
 
